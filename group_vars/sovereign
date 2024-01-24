@@ -4,13 +4,14 @@
 ################################################################################
 
 # common
-domain: (required)
-main_user_name: (required)
-organization: (required)
+domain: paisely.art
+main_user_name: deploy
+admin_user_name: admin
+organization: paisely art
 
 # admin email
 # fail2ban reports will be sent to this address
-admin_email: "{{ main_user_name }}@{{ domain }}"
+admin_email: "{{ admin_user_name }}@{{ domain }}"
 
 # mail
 mail_virtual_domains:

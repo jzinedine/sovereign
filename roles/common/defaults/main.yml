@@ -1,5 +1,5 @@
 common_timezone: 'Etc/UTC'
-admin_email: "{{ main_user_name }}@{{ domain }}"
+admin_email: "{{ admin_user_name }}@{{ domain }}"
 main_user_shell: "/bin/bash"
 friendly_networks:
   - ""

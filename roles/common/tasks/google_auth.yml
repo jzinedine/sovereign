@@ -6,7 +6,7 @@
   with_items:
     - libpam-google-authenticator
     - libpam0g-dev
-    - libqrencode3
+    - libqrencode4
   tags:
     - dependencies
 
@@ -27,7 +27,7 @@
 # with one concurrently valid code for default user
 - name: Generate a time-based secret code
   command: >-
-    /usr/bin/google-authenticator -t -f -d --label="{{ main_user_name }}@{{ domain }}" --qr-mode=ANSI -r 3 -R 30 -w 1
+    (echo "-1") | /usr/bin/google-authenticator -t -f -d --label="{{ admin_user_name }}@{{ domain }}" --qr-mode=ANSI -r 3 -R 30 -w 1
     --secret=/home/{{ main_user_name }}/.google_authenticator
     creates=/home/{{ main_user_name }}/.google_authenticator
   become: yes

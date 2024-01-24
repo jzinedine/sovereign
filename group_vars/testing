@@ -16,7 +16,7 @@ friendly_networks:
 
 # admin email
 # fail2ban reports will be sent to this address
-admin_email: "{{ main_user_name }}@{{ domain }}"
+admin_email: "{{ admin_user_name }}@{{ domain }}"
 
 # mailserver
 mail_virtual_domains:
